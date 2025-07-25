@@ -15,9 +15,12 @@ public class User {
     @Column(unique = true, nullable = false, length = 200)
     private String mail;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 256) // Longitud encriptadas
     private String password;
 
-    @Column()
-    private String roles;
+    @Column(name = "first_name", length = 80)
+    private String firstName;
+
+    @Column(name = "last_name", length = 80)
+    private String lastName;
 }
